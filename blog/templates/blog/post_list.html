@@ -6,18 +6,13 @@
         <div>
             <h1><a href="">Dorkbabe_blog</a></h1>
         </div>
-
+        {% for post in posts %}
+          <div>
+              <p>published: {{ post.published_date }}</p>
+              <h1><a href="">{{ post.title }}</a></h1>
+              <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
         <div>
-            <p>published: 10.22.2016, 16:08</p>
-            <h2><a href="">My first post</a></h2>
-            <p>We are here in Denver at Fusionbox today, a beautiful fall day...</p>
-        </div>
 
-        <div>
-            <p>published: 10.22.2016, 16:10</p>
-            <h2><a href="">My second post</a></h2>
-            <p>We had a great lunch (yum) and our table all ordered the same thing,
-              without knowing it! Great minds pick great sandwiches...</p>
-        </div>
-    </body>
 </html>
